@@ -1,0 +1,297 @@
+body{
+    background-image:  url(tech.webp);
+height: 100vh;
+      background-position: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: gold;
+}
+.about{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    left: 50%;
+}
+h2{
+    color: gold; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+ .flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 280px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, colorless 60%, blue 88%,
+     blue 40%, blue(255, 127, 80, 0.603) 48%);
+  color: gold;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, coral 30%, white 100%,
+     white 40%, rgb(255, 185, 160) 78%);
+  color: black;
+  transform: rotateY(180deg);
+}
+.myCard {
+  background-color: colorless;
+  width: 190px;
+  height: 284px;
+  color: gold;
+  perspective: 1000px;
+  position: absolute;
+  top: 197px;
+  left: 950px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: arrow;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+ position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: ghostwhite;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, colorless00, 80, 192) 46%, rgb(255, 204, 112) 100%;
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, black 0%, black 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.button-container {
+  display: flex;
+  background-color: rgb(27, 133, 219);
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(27, 133, 219, 0.5) 5px 10px 15px;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+
+
+.btn {
+  position: absolute;
+  top: 90px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  --glow-color: orange;
+  --glow-spread-color: black;
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: colorless;
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .btn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .btn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .btn:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+
+
+@media screen and (max-width: 780px) {
+  .myCard {
+    background-color: colorless;
+    position: absolute;
+    top: 550px;
+    color: #fff;
+    left: 100px;
+  }
+.myCard{
+  background-color: black;
+  border-radius: 1rem;
+color: ghostwhite;  
+}
+  
+  .flip-card {
+    background-color: black;
+    border-radius: 1rem;
+    width: 190px;
+    height: 280px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    color: ghostwhite;
+  }
+
+.btn {
+  position: absolute;
+  top: 910px;
+  left: 90px;
+}
+
+}
